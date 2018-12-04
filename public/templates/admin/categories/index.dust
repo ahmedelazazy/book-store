@@ -1,0 +1,39 @@
+{>"layouts/admin" /}
+
+{<body}
+<div class="col-12">
+    <h1>List Categories</h1>
+    <div>
+        <a href="/admin/categories/add" class="btn btn-primary">New Category</a>
+    </div>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Category </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {#categories}
+            <tr>
+                <td>
+                    {.title} </td>
+                <td>
+                    <a href="/admin/categories/edit/{._id}" class="btn btn-primary">Edit</a>
+
+                </td>
+                <td>
+                    <form method="POST" action="/admin/categories/delete/{._id}">
+                        <input type="hidden" name="_csrf" value="{_csrf}">
+                        <button type="submit"   class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {/categories}
+        </tbody>
+    </table>
+</div>
+
+{/body}

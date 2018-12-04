@@ -1,0 +1,24 @@
+{>"layouts/master" /}
+
+{<body}
+    <!-- <h1>Hello, {name}</h1> -->
+    {#books}
+	<div class="col-md-4">
+			<div class="card bg-default">
+                <h5 class="card-header">
+                    {.title}
+				</h5>
+				<div class="card-body">
+                        <img src="{.cover}" class="img-fluid">
+                    <p class="card-text">{.description}</p>
+                    <a class="btn btn-primary" href="books/details/{._id}">More</a>
+				</div>
+				<div class="card-footer">
+                    Price {.price}
+                    <!-- <button class="btn btn-primary">Buy</button> -->
+				</div>
+			</div>
+        </div>
+        {/books}
+
+{/body}

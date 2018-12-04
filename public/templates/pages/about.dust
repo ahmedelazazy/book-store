@@ -1,0 +1,9 @@
+{>"layouts/master" /}
+
+{<body}
+<div class="col-12">
+
+<h1>About</h1>
+    <p>Bla bla bla</p>
+    </div>
+    {/body}

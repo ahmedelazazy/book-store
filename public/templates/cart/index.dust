@@ -1,0 +1,44 @@
+{>"layouts/master" /}
+
+{<body}
+    <div class="col-12">
+        <h1>Shopping Cart</h1>
+        <a href="/cart/remove" class="btn btn-danger">Clear</a>
+
+        <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Book </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Subtotal
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {#cart.books}
+                    <tr>
+                        <td>
+                            {.title} </td>
+                        <td>
+                            {.price} </td>
+                        <td>
+                            {.qty} </td>
+                        <td>
+                    ${@math key="{.price}" method="multiply" operand="{.qty}" /}
+                        </td>
+
+                    </tr>
+                    {/cart.books}
+                </tbody>
+            </table>
+            <h3>Total: <strong>{cart.total}</strong></h3>
+
+    </div>
+{/body}

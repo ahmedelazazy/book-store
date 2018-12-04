@@ -1,0 +1,9 @@
+{>"layouts/admin" /}
+
+{<body}
+   <div class="col-12">
+       <h1>Admin Module</h1>
+       <p>Here you can manage books and categories</p>
+   </div>
+
+{/body}
