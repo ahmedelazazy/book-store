@@ -1,6 +1,6 @@
 # Mini Ecommerce - NodeJS
 
-Mini ecommerce app using NodeJS, it has products, shopping cart, manage products and categories
+Mini ecommerce app using NodeJS, it has products listing, manage products and categories, shopping cart
 
 ## Installation
 
